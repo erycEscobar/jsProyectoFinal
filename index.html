@@ -1,147 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing-Shop</title>
-
-    <link rel="stylesheet" href="./CSS/home.css">  
+    
+    <title>logAndReg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/main.css">
+   
 </head>
-
 <body>
 
-    <nav class="navbar"></nav>
+    <main>
 
-    <!-- heroSection -->
-    <header class="hero-section">
-        <div class="content">
-            <img src="./IMG/light-logo.png" alt="" class="logo">
-            <p class="sub-heading">las mejores prendas a un click de distancia</p>
+        <div class="contenedor__todo">
+
+            <div class="caja__trasera">             
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para continuar</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Registrate para iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="contenedor__login-register">
+                <form action="" class="formulario__login" id="formLog">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" id="emailLog" placeholder="Correo Electronico">
+                    <input type="password" id="passwordLog" placeholder="Contraseña">
+                    <Button type="submit" id="entrar">Entrar</Button>
+                    <p class="warnings" id="warningsLog"></p>
+                </form>
+                <form action="" class="formulario__register" id="formReg">
+                    <h2>Registrarse</h2>
+                    <input type="text" id="name" placeholder="Nombre Completo">
+                    <input type="text" id="email" placeholder="Correo Electronico">
+                    <input type="text" id="userNick" placeholder="Usuario">
+                    <input type="password" id="password" placeholder="Contraseña">
+                    <button type="submit">Registrarse</button>
+                    <p class="warnings" id="warnings"></p>
+                </form>
+            </div>
+            
         </div>
-    </header>
 
-    <!-- cards-container -->
-    <section class="product">
-        <h2 class="product-category">los mas vendidos</h2>
-        <button class="pre-btn"><img src="./IMG/arrow.png" alt=""></button>
-        <button class="nxt-btn"><img src="./IMG/arrow.png" alt=""></button>
+    </main>
 
-        <div class="product-container">
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card1.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card2.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card3.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card4.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card5.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card6.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="./IMG/card7.png" alt="" class="product-thumb">
-                    <button class="card-btn">favoritos</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">marca</h2>
-                    <p class="product-short-des">descripcion del producto...</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- collections -->
-    <section class="collection-container">
-        <a href="#" class="collection">
-            <img src="./IMG/women-collection.png" alt="">
-            <p class="collection-title">mujer <br> indumentaria</p>
-        </a>
-        <a href="#" class="collection">
-            <img src="./IMG/men-collection.png" alt="">
-            <p class="collection-title">hombre <br> indumentaria</p>
-        </a>
-        <a href="#" class="collection">
-            <img src="./IMG/accessories-collection.png" alt="">
-            <p class="collection-title">accesorios</p>
-        </a>
-        
-    </section>
-
-    <script src="js/nav.js"></script>
-    <script src="js/home.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./JS/animations.js"></script>
+    <script src="./JS/main.js"></script>
 
 </body>
-
 </html>
