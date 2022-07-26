@@ -9,7 +9,7 @@ let formulario_login = document.querySelector(".formulario__login");
 let formulario_register = document.querySelector(".formulario__register");
 let caja_trasera_login = document.querySelector(".caja__trasera-login");
 let caja_trasera_register = document.querySelector(".caja__trasera-register");
-let contenedor_todo = document.querySelector(".contenedor__todo");
+let contenedor_todo = document.querySelector(".login-container");
 
 
 

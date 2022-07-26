@@ -19,7 +19,7 @@ main {
     margin-top: 100px;
 }
 
-.contenedor__todo {
+.login-container {
     width: 100%;
     max-width: 800px;
     margin: auto;
@@ -78,7 +78,6 @@ main {
     position: relative;
     top: -185px;
     left: 10px;
-
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
