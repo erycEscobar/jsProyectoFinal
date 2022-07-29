@@ -2,17 +2,12 @@ document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciar
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPagina);
 
-
-
 let contenedor_login_register = document.querySelector(".contenedor__login-register");
 let formulario_login = document.querySelector(".formulario__login");
 let formulario_register = document.querySelector(".formulario__register");
 let caja_trasera_login = document.querySelector(".caja__trasera-login");
 let caja_trasera_register = document.querySelector(".caja__trasera-register");
 let contenedor_todo = document.querySelector(".login-container");
-
-
-
 
 function anchoPagina() {
     if(window.innerWidth > 850) {
@@ -30,8 +25,6 @@ function anchoPagina() {
 }
 
 anchoPagina();
-
-
 
 function iniciarSesion() {
     if(window.innerWidth > 850) {
@@ -66,12 +59,4 @@ function register() {
         caja_trasera_login.style.display = "block";
         caja_trasera_login.style.opacity = "1";
     }
-}
-
-function hideLogMenu() {
-    contenedor_todo.style.display = "none";
-}
-
-function showLogMenu() {
-    contenedor_todo.style.display = "contents";
 }

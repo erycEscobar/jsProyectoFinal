@@ -9,6 +9,11 @@ const parrafoLog = document.getElementById("warningsLog");
 const emailLog = document.getElementById("emailLog");
 const passLog = document.getElementById("passwordLog");
 
+const modalBg = document.querySelector('.modal-bg');
+
+export let usuarioActivo = "invitado";
+
+// FETCH DATA UsuariosDePrueba
 const API = "./DATA/usersData.json";
 
 const getData = async () => {
@@ -18,7 +23,7 @@ const getData = async () => {
 };
 
 
-
+// ARRAY DE USUARIOS
 class User {
     constructor (nombre, email, nickName, password) {
         this.nombre = nombre;
@@ -28,10 +33,10 @@ class User {
     }
 }
 
+// ARRAY DE USUARIOS
 const arrayUsers = [ ];
 
-
-
+// CARGA DE USUARIOS DE PRUEBA
 async function cargarBaseDeUsuarios() {
     let baseDeUsuarios = await getData();
     if (baseDeUsuarios == null) {
@@ -40,7 +45,7 @@ async function cargarBaseDeUsuarios() {
     }
     else {
         console.log(baseDeUsuarios);
-        console.log("Se cargaron los usuarios");
+        console.log("Se cargaron los usuarios de prueba");
         for (const usuario of baseDeUsuarios) {
             arrayUsers.push(new User(usuario.nombre, usuario.email, usuario.nickName, usuario.password));
         }
@@ -49,8 +54,7 @@ async function cargarBaseDeUsuarios() {
 
 cargarBaseDeUsuarios();
 
-
-
+// CONTROL DE USUARIOS CONSOLA
 function printNewUser(find, propiedad) {
     let users = arrayUsers.filter(user => user[propiedad] === find);
     for (const User of users) {
@@ -68,18 +72,16 @@ function printNewUser(find, propiedad) {
 }
 
 
-
+//VERIFICACION Y REGISTRO DE USUARIOS
 function verificacionUsr(find, propiedad, pass) {
     let arrayUser = arrayUsers.filter(user => user[propiedad] === find);
     for (const user of arrayUser) {
         if (user.password === pass) {
-            console.log("Usuario Activo: " + user.email);
+            //console.log("Usuario Activo: " + user.email);
             return true;
         }
     };
 }
-
-
 
 function mailRegistrado(find, propiedad) {
     let users = arrayUsers.filter(user => user[propiedad] === find);
@@ -100,13 +102,13 @@ function registroUser() {
     }
     else {
         arrayUsers.push(new User(nombreUsr, emailUsr, usuario, passwordUsr));
-        printNewUser(emailUsr, "email");
+        //printNewUser(emailUsr, "email"); Llamado a funcion de control en consola
         return true;
     }
 }
 
 
-
+// MODAL DEL REGISTRO DE USUARIOS
 formReg.addEventListener("submit", e=> {
     e.preventDefault();
     let warnings = "";
@@ -155,7 +157,7 @@ formReg.addEventListener("submit", e=> {
 })
 
 
-
+// MODAL DEL LOGIN DE USUARIOS
 formLog.addEventListener("submit", f=> {
     f.preventDefault();
     let warnings = "";
@@ -182,10 +184,8 @@ formLog.addEventListener("submit", f=> {
                 text: `Hola ${emailUsr}`,
                 icon: 'success',
             });
-            warnings += `Bienvenido ${emailUsr}`;
-            parrafoLog.innerHTML = warnings;
-            hideLogMenu();
-            startAppPage(emailUsr);
+            modalBg.classList.remove('bg-active');
+            usuarioActivo = emailUsr;
         }
         else {
             swal({
@@ -199,16 +199,7 @@ formLog.addEventListener("submit", f=> {
     }
 })
 
-
-
-function startAppPage(sesionUsuario) {
-    showUserWelcome(sesionUsuario);
-}
-
-
-function showUserWelcome(user) {
-    let div = document.createElement("div");
-    div.className = "mainPage"
-    div.innerHTML = `<h1>Bienvenido ${user}!</h1>`
-    document.body.append(div);
+// LOGOUTUSER
+export function cerrarSesion () {
+    usuarioActivo = "invitado";
 }

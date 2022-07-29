@@ -1,0 +1,198 @@
+[
+
+    {
+        "id": 1,
+        "marca": "boss",
+        "modelo": "ac-3",
+        "nombre": "acoustic simulator",
+        "tipo": "stompbox",
+        "efecto": "simulation",
+        "precio": 100,
+        "img": "../IMG/card1.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+
+    {
+        "id": 2,
+        "marca": "boss",
+        "modelo": "aw-3",
+        "nombre": "dynamic wah",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card2.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+    
+    {
+        "id": 3,
+        "marca": "boss",
+        "modelo": "vo-1",
+        "nombre": "vocoder",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card3.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+
+    {
+        "id": 4,
+        "marca": "boss",
+        "modelo": "bf-3",
+        "nombre": "flanger",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card4.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+
+    {
+        "id": 5,
+        "marca": "boss",
+        "modelo": "mt-2",
+        "nombre": "metal zone",
+        "tipo": "stompbox",
+        "efecto": "distortion",
+        "precio": 100,
+        "img": "../IMG/card5.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+
+    {
+        "id": 6,
+        "marca": "boss",
+        "modelo": "ce-2w",
+        "nombre": "chorus",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card6.webp",
+        "cantidad": 1,
+        "stock": 10
+    },
+
+    {
+        "id": 7,
+        "marca": "boss",
+        "modelo": "ce-5",
+        "nombre": "chorus ensamble",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card7.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 8,
+        "marca": "boss",
+        "modelo": "cs-3",
+        "nombre": "compression sustainer",
+        "tipo": "stompbox",
+        "efecto": "dynamic",
+        "precio": 100,
+        "img": "../IMG/card8.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 9,
+        "marca": "boss",
+        "modelo": "ds-1",
+        "nombre": "distortion",
+        "tipo": "stompbox",
+        "efecto": "distortion",
+        "precio": 100,
+        "img": "../IMG/card9.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 10,
+        "marca": "boss",
+        "modelo": "od-1x",
+        "nombre": "overdrive",
+        "tipo": "stompbox",
+        "efecto": "distortion",
+        "precio": 100,
+        "img": "../IMG/card10.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 11,
+        "marca": "boss",
+        "modelo": "tr-2",
+        "nombre": "tremolo",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card11.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 12,
+        "marca": "boss",
+        "modelo": "os-2",
+        "nombre": "overdrive distortion",
+        "tipo": "stompbox",
+        "efecto": "distortion",
+        "precio": 100,
+        "img": "../IMG/card12.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 13,
+        "marca": "boss",
+        "modelo": "ph-3",
+        "nombre": "pahse shifter",
+        "tipo": "stompbox",
+        "efecto": "modulation",
+        "precio": 100,
+        "img": "../IMG/card13.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 14,
+        "marca": "boss",
+        "modelo": "rc-3",
+        "nombre": "loop station",
+        "tipo": "stompbox",
+        "efecto": "looper",
+        "precio": 100,
+        "img": "../IMG/card14.webp",
+        "cantidad": 1,
+        "stock": 5
+    },
+
+    {
+        "id": 15,
+        "marca": "boss",
+        "modelo": "sd-1",
+        "nombre": "super overdrive",
+        "tipo": "stompbox",
+        "efecto": "distortion",
+        "precio": 100,
+        "img": "../IMG/card15.webp",
+        "cantidad": 1,
+        "stock": 5
+    }
+
+]
