@@ -17,8 +17,6 @@ const todos = document.getElementById('todosFilter');
 
 let cart = [];
 
-let vaciarCarrito = [];
-
 const productos = await getData();
 
 
@@ -26,7 +24,7 @@ const productos = await getData();
 btnFinalizarCompra.addEventListener('click', () => {
     let total = precioTotal.innerText;
     cartModalBg.classList.remove('bg-active');
-    cart = vaciarCarrito;
+    cart = [];    
     localStorage.setItem('carrito', JSON.stringify(cart));
     mostrarCarrito(cart);
     actualizarCarrito();
@@ -108,7 +106,7 @@ const mostrarProductos = (array) => {
 // SE AGREGAN LOS PRODUCTOS AL CARRITO
 function agregarAlCarrito(id) {
     if(cart && cart.find(item => item.id === id)) {
-        console.log("ya esta en el carrito");
+        //console.log("ya esta en el carrito");
         let existProd = cart.find(item => item.id === id);
         existProd.cantidad++;
         mostrarCarrito(cart);
@@ -165,8 +163,8 @@ function mostrarCarrito(array) {
         btnEliminar.addEventListener('click', () => {
             btnEliminar.parentElement.remove();
             cart = array.filter( ele => ele.id !== productoAgregar.id);
-            actualizarCarrito()
-
+            mostrarCarrito(cart);
+            actualizarCarrito();
             localStorage.setItem('carrito', JSON.stringify(cart));
         })
     })
